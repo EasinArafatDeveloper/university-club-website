@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Career & Leadership Club (CLC) Platform
 
-## Getting Started
+A comprehensive, premium web application for managing university club activities, member engagements, and administrative tasks. Built with a modern tech stack to provide a seamless experience for both students and administrators.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🏢 Admin Dashboard (Full CRUD)
+*   **Content Management**: Create, edit, and delete Events, Contests, Job Circulars, and Notices.
+*   **Dynamic Image Management**: Support for event banners and automatic previews.
+*   **Advanced Rich Text Editor**: Integrated with `react-quill-new` for professional content formatting.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🎨 Design Lab (Built-in Design Tool)
+*   **Poster Generator**: Create Facebook-sized posters for Contests, Winners, Hiring, and Teasers.
+*   **QR Code Integration**: Automatically generate and embed QR codes for registration links.
+*   **Letterhead Generator**: Write and download official club letters with professional headers and footers.
+*   **One-Click Export**: High-quality PNG download support for all designs.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 👥 Member & Registration Management
+*   **Member Directory**: Searchable list of all club members with status indicators (Club Member vs. Pending).
+*   **Activity Specific Lists**: View participants for specific events or contests separately.
+*   **Simplified Join Flow**: Easy application process with flexible email requirements.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🏠 Dynamic Homepage
+*   **Real-time News Ticker**: A scrolling timeline bar at the top showing the latest notices and events.
+*   **Partner Showcase**: An automated, infinite-scrolling slider featuring collaboration partners.
+*   **Modern UI/UX**: Premium aesthetics with dark mode support, glassmorphism, and Framer Motion animations.
 
-## Learn More
+### 🔐 Secure Authentication
+*   **Role-Based Access Control**: Different permissions for Super Admins, Advisers, Wing Heads, and General Members.
+*   **NextAuth Integration**: Secure login system with MongoDB session storage.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*   **Frontend**: Next.js 15+ (App Router), React 19, TypeScript
+*   **Styling**: Vanilla CSS, Tailwind CSS (for layout), Framer Motion (animations)
+*   **Backend**: Next.js API Routes (Serverless)
+*   **Database**: MongoDB with Mongoose ODM
+*   **Authentication**: NextAuth.js
+*   **UI Components**: Lucide React, SweetAlert2, React Hot Toast
+*   **Design Tools**: html-to-image (for design exports)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 Installation & Setup
 
-## Deploy on Vercel
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/EasinArafatDeveloper/university-club-website.git
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  **Environment Variables**:
+    Create a `.env.local` file in the root and add:
+    ```env
+    MONGODB_URI=your_mongodb_connection_string
+    NEXTAUTH_SECRET=your_nextauth_secret
+    NEXTAUTH_URL=http://localhost:3000
+    ```
+
+4.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+
+5.  **Seeding Data (Optional)**:
+    ```bash
+    node scripts/seed.mjs
+    ```
+
+## 📄 License
+This project is developed for the Career & Leadership Club. All rights reserved.
+
+---
+Developed with ❤️ by **Easin Arafat**
