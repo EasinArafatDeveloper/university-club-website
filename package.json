@@ -22,7 +22,6 @@
     "react-dom": "19.2.4",
     "react-hot-toast": "^2.6.0",
     "react-markdown": "^10.1.0",
-    "react-quill": "^2.0.0",
     "react-quill-new": "^3.8.3",
     "sweetalert2": "^11.26.24",
     "sweetalert2-react-content": "^5.1.2",
