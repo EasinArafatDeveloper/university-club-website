@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin, Tag, Type, ArrowLeft, Loader2, Save } from "lucide-react";
+import { Calendar, Clock, MapPin, Tag, Type, ArrowLeft, Loader2, Save, Image as ImageIcon } from "lucide-react";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import Editor from "@/components/Editor";
