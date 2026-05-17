@@ -10,14 +10,14 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 bg-brand-500 rounded-md flex items-center justify-center text-white font-heading font-bold">
-                C
+                S
               </div>
               <span className="font-heading font-bold text-xl tracking-tight text-white">
-                Career & <span className="text-brand-500">Leadership</span>
+                Scholars <span className="text-brand-500">Influencers</span>
               </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Empowering students through leadership, career growth, and innovation. Join us to build a better future together.
+              To build a dynamic student ecosystem where individuals become industry-ready professionals. Motto: "Learn. Build. Influence."
             </p>
             <div className="flex gap-4 pt-2">
               <a href="#" className="text-slate-400 hover:text-brand-500 transition-colors">
@@ -71,15 +71,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-brand-500 shrink-0 mt-0.5" />
-                <span className="text-sm text-slate-400">Student Center, Main Campus, University Name</span>
+                <span className="text-sm text-slate-400">University of Scholars, Dhaka, Bangladesh</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-brand-500 shrink-0" />
-                <span className="text-sm text-slate-400">+1 (555) 123-4567</span>
+                <span className="text-sm text-slate-400">+880 1234 567890</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-brand-500 shrink-0" />
-                <span className="text-sm text-slate-400">contact@clc-university.edu</span>
+                <span className="text-sm text-slate-400">contact@scholarsinfluencers.org</span>
               </li>
             </ul>
           </div>
@@ -87,7 +87,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-slate-500">
-            &copy; {new Date().getFullYear()} Career & Leadership Club. All rights reserved.
+            &copy; {new Date().getFullYear()} Scholars Influencers Club (SIC). All rights reserved.
           </p>
           <div className="flex gap-4 text-sm text-slate-500">
             <Link href="/privacy" className="hover:text-slate-300">Privacy Policy</Link>

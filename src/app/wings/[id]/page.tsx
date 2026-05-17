@@ -10,75 +10,65 @@ export default function WingDetailsPage() {
   const id = params.id as string;
 
   const wingsData: Record<string, any> = {
-    "career-development": {
-      name: "Career Development Wing",
-      head: "Alex Johnson",
-      members: 120,
-      description: "Focuses on resume building, interview preparation, and connecting students with top-tier corporate opportunities.",
-      details: "Our Career Development Wing is dedicated to bridging the gap between academia and the professional world. We partner with industry leaders to provide exclusive internships, full-time job placements, and personalized career coaching.",
-      activities: ["Resume Revamp Workshops", "Mock Interview Sessions", "Corporate Networking Dinners", "1-on-1 Career Counseling"],
+    "human-resource": {
+      name: "Human Resource Wing (HRW)",
+      head: "Sarah Jenkins",
+      members: 75,
+      description: "Responsible for building, managing and developing the club's human capital. It oversees recruitment, onboarding, database management, and KPI evaluations.",
+      details: "The HR Wing is the structural backbone of SIC. It manages overall recruitment drives, coordinates comprehensive member onboarding sessions, evaluates individual member performances through monthly KPI matrices, resolves internal conflicts, and implements strictly defined disciplinary compliance as mandated by the Core Committee.",
+      activities: ["Recruitment Drives", "Member Onboarding Sessions", "Monthly KPI Performance Reviews", "Disciplinary Compliance Audits", "Leadership & Talent Management"],
       color: "bg-blue-600",
       lightColor: "bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400"
     },
-    "leadership": {
-      name: "Leadership Wing",
-      head: "Samantha Lee",
-      members: 85,
-      description: "Organizes workshops, bootcamps, and seminars aimed at building strong, resilient, and visionary leaders.",
-      details: "The Leadership Wing focuses on soft skills, emotional intelligence, and strategic thinking. We train the next generation of executives and founders through intensive bootcamps and mentorship from experienced industry veterans.",
-      activities: ["Annual Leadership Summit", "Executive Coaching", "Public Speaking Mastery", "Conflict Resolution Workshops"],
+    "partnership-collaboration": {
+      name: "Partnership & Collaboration Wing (PCW)",
+      head: "Michael Chang",
+      members: 50,
+      description: "Builds strategic relationships with external organizations, negotiates corporate sponsorships, drafts proposals, and maintains alumni networking.",
+      details: "PCW serves as the primary liaison between Scholars Influencers Club and the corporate landscape. Members build robust networks with alumni, secure sponsorships, pitch projects to corporate partners, negotiate MoUs, and manage relationships with external student bodies.",
+      activities: ["Corporate Sponsorship Pitches", "Alumni Networking Programs", "Strategic MoU Drafting", "Industry Outreach & Meetings", "Cross-University Collaborations"],
       color: "bg-indigo-600",
       lightColor: "bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400"
     },
-    "event-management": {
-      name: "Event Management Wing",
-      head: "David Chen",
-      members: 150,
-      description: "The backbone of our operations, responsible for seamlessly executing summits, seminars, and large-scale competitions.",
-      details: "From logistics and vendor management to on-the-ground execution, the Event Management Wing handles the A to Z of our club's activities. Members gain hands-on project management and operational experience.",
-      activities: ["Logistics Planning", "Vendor Negotiations", "On-site Execution", "Budget Management"],
-      color: "bg-violet-600",
-      lightColor: "bg-violet-50 text-violet-600 dark:bg-violet-900/30 dark:text-violet-400"
-    },
-    "media-content": {
-      name: "Media & Content Wing",
-      head: "Maria Garcia",
-      members: 65,
-      description: "Creative minds driving our digital presence through stunning graphics, engaging videos, and compelling copy.",
-      details: "Our creative powerhouse. The Media & Content Wing manages our social media channels, website content, and promotional materials. We produce high-quality videos, graphics, and articles to amplify the club's impact.",
-      activities: ["Video Production", "Graphic Design", "Social Media Management", "Content Strategy"],
+    "marketing-branding": {
+      name: "Marketing & Branding Wing (MBW)",
+      head: "Emily Rodriguez",
+      members: 90,
+      description: "Builds public image, maintains brand identity, creates engaging social content calendars, manages public relations, media archiving, and promo campaigns.",
+      details: "MBW drives the brand awareness and public representation of SIC. It manages all official social media pipelines, publishes content calendars, produces graphic designs, records official photos and videos during summits, drafts press releases, and promotes events to maximize engagement.",
+      activities: ["Social Media & PR Management", "Graphic & UI/UX Design Assets", "Copywriting & Content Strategy", "Archival Photography & Videography", "Promotional Campaigns"],
       color: "bg-pink-600",
       lightColor: "bg-pink-50 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400"
     },
-    "public-relations": {
-      name: "Public Relations Wing",
-      head: "James Wilson",
-      members: 45,
-      description: "Managing external communications, securing sponsorships, and building relationships with industry partners.",
-      details: "The face of our club to the corporate world. PR members negotiate sponsorships, manage media relations, and build lasting partnerships with companies and other student organizations nationwide.",
-      activities: ["Sponsorship Acquisition", "Corporate Communications", "Partnership Building", "Media Relations"],
-      color: "bg-orange-600",
-      lightColor: "bg-orange-50 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400"
+    "event-program": {
+      name: "Event & Program Management Wing (EPMW)",
+      head: "Tanvir Rahman",
+      members: 110,
+      description: "Coordinates logistics, plans concept roadmaps, manages participant registrations, schedules timelines, and executes workshops, seminars, and programs.",
+      details: "EPMW is the logistical engine of SIC, planning, structuring, and executing all club programs. Members gain hands-on event planning expertise, handle venue coordination, curate operational timelines, draft budgeting requisitions, manage attendees, and write post-event reports.",
+      activities: ["Concept Planning & Roadmaps", "On-Ground Venue Execution", "Participant Registration Hub", "Event Logistical Audits", "Post-Event Reporting Frameworks"],
+      color: "bg-violet-600",
+      lightColor: "bg-violet-50 text-violet-600 dark:bg-violet-900/30 dark:text-violet-400"
     },
-    "entrepreneurship": {
-      name: "Entrepreneurship Wing",
+    "career-placement": {
+      name: "Career & Placement Wing (CPW)",
       head: "Priya Patel",
-      members: 70,
-      description: "Nurturing startup ideas, providing incubation resources, and hosting business pitch competitions.",
-      details: "For the builders and innovators. We provide resources, mentorship, and funding opportunities for student founders. The wing hosts incubators and pitch competitions to turn ideas into viable businesses.",
-      activities: ["Startup Incubator", "Pitch Deck Clinics", "Founder Networking", "VC Panels"],
-      color: "bg-yellow-500",
-      lightColor: "bg-yellow-50 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400"
-    },
-    "research-innovation": {
-      name: "Research & Innovation Wing",
-      head: "Robert Taylor",
-      members: 55,
-      description: "Driving forward-thinking projects, publishing papers, and exploring cutting-edge industry trends.",
-      details: "We explore the future. This wing conducts deep-dive research into emerging tech, market trends, and economic shifts. Members publish thought leadership pieces and work on innovative tech projects.",
-      activities: ["Trend Analysis", "Whitepaper Publication", "Tech Prototypes", "Industry Research Seminars"],
+      members: 80,
+      description: "Prepares members for careers through structured bootcamps, resume-building clinics, mock interviews, placement support, and corporate internship pipelines.",
+      details: "CPW directly addresses corporate readiness. It organizes resume refining workshops, schedules mock panels with corporate heads, establishes direct pipelines for internships, and delivers targeted training in hard and soft skills requested by employers.",
+      activities: ["Resume Refining Clinics", "Mock Corporate Panel Interviews", "Exclusive Internship Pipelines", "Hard & Soft Skill Bootcamps", "Industry Mentor Partnerships"],
       color: "bg-emerald-600",
       lightColor: "bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400"
+    },
+    "finance": {
+      name: "Finance Wing (FW)",
+      head: "Sajjad Hossain",
+      members: 40,
+      description: "Structures annual budgets, records expenses and incoming funds, enforces transparency, monitors financial compliance, and audits transactions.",
+      details: "Led directly under the Core Leadership's Treasurer, FW guarantees complete financial accountability. It structures and reviews event budgets, logs all transaction invoices, reconciles corporate sponsorship cashflows, conducts internal audits, and produces detailed annual reports.",
+      activities: ["Annual Budget Structuring", "Transaction & Invoice Audits", "Sponsorship Reconciliation", "Financial Compliance Audits", "Detailed Annual Reporting"],
+      color: "bg-yellow-600",
+      lightColor: "bg-yellow-50 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400"
     }
   };
 

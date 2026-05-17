@@ -21,13 +21,12 @@ const navLinks = [
 ];
 
 const wingsList = [
-  { name: "Career Development", path: "/wings/career-development" },
-  { name: "Leadership", path: "/wings/leadership" },
-  { name: "Event Management", path: "/wings/event-management" },
-  { name: "Media & Content", path: "/wings/media-content" },
-  { name: "Public Relations", path: "/wings/public-relations" },
-  { name: "Entrepreneurship", path: "/wings/entrepreneurship" },
-  { name: "Research & Innovation", path: "/wings/research-innovation" },
+  { name: "Human Resource Wing (HRW)", path: "/wings/human-resource" },
+  { name: "Partnership & Collaboration Wing (PCW)", path: "/wings/partnership-collaboration" },
+  { name: "Marketing & Branding Wing (MBW)", path: "/wings/marketing-branding" },
+  { name: "Event & Program Management Wing (EPMW)", path: "/wings/event-program" },
+  { name: "Career & Placement Wing (CPW)", path: "/wings/career-placement" },
+  { name: "Finance Wing (FW)", path: "/wings/finance" },
 ];
 
 export default function Navbar() {
@@ -78,10 +77,10 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-heading font-bold text-xl">
-                C
+                S
               </div>
               <span className="font-heading font-bold text-xl tracking-tight text-slate-900 dark:text-white">
-                Career & <span className="text-brand-600">Leadership</span>
+                Scholars <span className="text-brand-600">Influencers</span>
               </span>
             </Link>
           </div>

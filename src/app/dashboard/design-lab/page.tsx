@@ -18,7 +18,7 @@ export default function DesignLabPage() {
   const [title, setTitle] = useState("Your Event Title");
   const [date, setDate] = useState("May 25, 2026");
   const [location, setLocation] = useState("Main Auditorium");
-  const [qrUrl, setQrUrl] = useState("https://clc-club.com/join");
+  const [qrUrl, setQrUrl] = useState("https://scholarsinfluencers.org/join");
   const [subtitle, setSubtitle] = useState("Empowering the next generation");
   const [winnerName, setWinnerName] = useState("Winner Name");
   const [position, setPosition] = useState("Executive Member");
@@ -223,8 +223,8 @@ export default function DesignLabPage() {
                     <div className="w-full h-full bg-slate-950 flex flex-col items-center justify-center p-12 text-white relative">
                       <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
                       <div className="absolute top-12 left-12 flex items-center gap-3">
-                        <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center font-bold text-2xl">C</div>
-                        <span className="font-heading font-bold text-xl tracking-tighter">CAREER & LEADERSHIP CLUB</span>
+                        <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center font-bold text-2xl">S</div>
+                        <span className="font-heading font-bold text-xl tracking-tighter">SCHOLARS INFLUENCERS CLUB</span>
                       </div>
                       <div className="z-10 text-center">
                         <motion.span layoutId="badge" className="inline-block px-4 py-1 bg-brand-600 rounded-full text-xs font-black uppercase tracking-[0.2em] mb-6">REGISTRATION OPEN</motion.span>
@@ -318,15 +318,15 @@ export default function DesignLabPage() {
                        {/* Header */}
                        <div className="flex justify-between items-start border-b-2 border-brand-600 pb-8 mb-12">
                           <div className="flex items-center gap-4">
-                             <div className="w-16 h-16 bg-brand-600 rounded-2xl flex items-center justify-center font-bold text-white text-3xl">C</div>
+                             <div className="w-16 h-16 bg-brand-600 rounded-2xl flex items-center justify-center font-bold text-white text-3xl">S</div>
                              <div>
-                                <h1 className="text-2xl font-bold font-sans tracking-tighter">CAREER & LEADERSHIP CLUB</h1>
-                                <p className="text-[10px] font-sans uppercase font-bold tracking-widest text-slate-500">Innovation & Excellence</p>
+                                <h1 className="text-2xl font-bold font-sans tracking-tighter">SCHOLARS INFLUENCERS CLUB</h1>
+                                <p className="text-[10px] font-sans uppercase font-bold tracking-widest text-slate-500">Learn. Build. Influence.</p>
                              </div>
                           </div>
                           <div className="text-right font-sans text-[10px] font-bold text-slate-500 leading-relaxed uppercase tracking-widest">
                              <p>University Campus, Road 04</p>
-                             <p>contact@clc-club.com</p>
+                             <p>contact@scholarsinfluencers.org</p>
                              <p>+880 1234 567890</p>
                           </div>
                        </div>

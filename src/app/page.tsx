@@ -26,18 +26,19 @@ export default function Home() {
       <NewsTicker />
       {/* Hero Section */}
       <section className="relative pt-12 pb-32 lg:pt-20 lg:pb-40 overflow-hidden">
-        {/* Background Gradients */}
-        <div className="absolute inset-0 bg-slate-50 dark:bg-slate-950 -z-20"></div>
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-400/20 rounded-full blur-[120px] -z-10 translate-x-1/3 -translate-y-1/4"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-400/20 rounded-full blur-[100px] -z-10 -translate-x-1/4 translate-y-1/4"></div>
+        {/* Background Gradients & Grid */}
+        <div className="absolute inset-0 bg-slate-50 dark:bg-slate-950 -z-25"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] -z-20"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-brand-400/20 via-indigo-400/20 to-transparent rounded-full blur-[120px] -z-10 translate-x-1/3 -translate-y-1/4 animate-pulse duration-7000"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-emerald-400/10 via-blue-400/10 to-transparent rounded-full blur-[100px] -z-10 -translate-x-1/4 translate-y-1/4"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             <motion.div 
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
-              className="max-w-2xl"
+              className="max-w-2xl lg:col-span-7"
             >
               <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 dark:bg-brand-900/30 dark:text-brand-300 text-sm font-medium mb-6 border border-brand-200 dark:border-brand-800/50">
                 <span className="relative flex h-2 w-2">
@@ -47,46 +48,95 @@ export default function Home() {
                 Recruitment Open for Fall 2026
               </motion.div>
               
-              <motion.h1 variants={fadeIn} className="text-5xl lg:text-7xl font-heading font-bold text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-6">
-                Shape Your <br />
-                <span className="text-gradient">Future Today</span>
+              <motion.h1 variants={fadeIn} className="text-5xl lg:text-[4.8rem] xl:text-[5.5rem] font-heading font-black text-slate-900 dark:text-white leading-[1.05] tracking-tight mb-6">
+                Scholars <br />
+                <span className="bg-gradient-to-r from-brand-600 via-indigo-600 to-emerald-500 dark:from-brand-400 dark:via-indigo-400 dark:to-emerald-400 bg-clip-text text-transparent">Influencers Club</span>
               </motion.h1>
               
-              <motion.p variants={fadeIn} className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed max-w-lg">
-                Join the premier university club dedicated to empowering students through leadership, career growth, and innovation. Build your network, develop your skills, and lead with purpose.
+              <motion.p variants={fadeIn} className="text-lg text-slate-600 dark:text-slate-350 mb-8 leading-relaxed max-w-lg">
+                A premier student-led organization at the University of Scholars. We operate under the motto <strong className="text-brand-600 dark:text-brand-400 font-bold">“Learn. Build. Influence.”</strong> to bridge the gap between academic learning and corporate expectations.
               </motion.p>
               
               <motion.div variants={fadeIn} className="flex flex-wrap items-center gap-4">
-                <Link href="/join" className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 flex items-center gap-2">
+                <Link href="/join" className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 flex items-center gap-2 hover:-translate-y-0.5 transform">
                   Join the Club <ArrowRight size={18} />
                 </Link>
-                <Link href="/events" className="bg-white hover:bg-slate-50 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-full font-medium transition-all">
+                <Link href="/events" className="bg-white hover:bg-slate-50 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-0.5 transform">
                   Explore Events
                 </Link>
               </motion.div>
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative hidden lg:block h-[600px] w-full"
+              className="relative hidden lg:block h-[500px] w-full lg:col-span-5 self-center"
             >
-              {/* Abstract Hero Image Representation using geometric shapes/glassmorphism */}
-              <div className="absolute inset-0 w-full h-full glass-card rounded-3xl border-white/40 shadow-2xl overflow-hidden flex items-center justify-center bg-gradient-to-br from-brand-100 to-indigo-50 dark:from-slate-800 dark:to-slate-900">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-80 mix-blend-overlay dark:opacity-40"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              {/* Main Compound Image Card with Premium Shadow and Hover Lift */}
+              <motion.div 
+                whileHover={{ y: -8, scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="absolute inset-0 w-full h-full rounded-[2rem] p-1 border-2 border-white/20 dark:border-slate-800/80 shadow-[0_30px_60px_rgba(0,0,0,0.12)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.4)] overflow-hidden bg-gradient-to-br from-indigo-100 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950"
+              >
+                {/* Background Unsplash Image with custom modern opacity */}
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-[0.95] dark:opacity-[0.45] mix-blend-normal dark:mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
                 
-                <div className="absolute bottom-8 left-8 right-8 glass-card !bg-white/90 dark:!bg-slate-900/90 p-6 rounded-2xl flex items-center gap-4 shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
-                  <div className="w-12 h-12 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center shrink-0">
+                {/* Bottom Main Glassmorphic Overlay */}
+                <div className="absolute bottom-6 left-6 right-6 backdrop-blur-md bg-white/90 dark:bg-slate-900/90 p-5 rounded-2xl flex items-center gap-4 shadow-2xl border border-white/40 dark:border-slate-805/50 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-brand-100 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0 shadow-inner">
                     <TrendingUp size={24} />
                   </div>
                   <div>
-                    <h3 className="font-heading font-semibold text-slate-900 dark:text-white">Accelerate Your Career</h3>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">Join 5,000+ alumni at top companies</p>
+                    <h3 className="font-heading font-extrabold text-sm text-slate-900 dark:text-white">Accelerate Your Career</h3>
+                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">Learn. Build. Influence.</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
+
+              {/* Floating Badge 1: Top-Left Overlay */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                whileHover={{ scale: 1.05, y: -4 }}
+                className="absolute -top-6 -left-6 backdrop-blur-md bg-white/90 dark:bg-slate-900/90 py-3.5 px-4.5 rounded-2xl flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.3)] border border-white/50 dark:border-slate-800/80 z-30 cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-xl bg-amber-105 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold shadow-sm shrink-0">
+                  <Award size={20} />
+                </div>
+                <div>
+                  <h4 className="text-[10px] font-black text-slate-400 dark:text-slate-550 uppercase tracking-widest leading-none mb-1">Founded</h4>
+                  <p className="text-xs font-extrabold text-slate-800 dark:text-white">26 April, 2023</p>
+                </div>
+              </motion.div>
+
+              {/* Floating Badge 2: Mid-Right Overlay */}
+              <motion.div 
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                whileHover={{ scale: 1.05, y: -4 }}
+                className="absolute top-1/4 -right-6 backdrop-blur-md bg-white/90 dark:bg-slate-900/90 py-3.5 px-4.5 rounded-2xl flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.3)] border border-white/50 dark:border-slate-800/80 z-30 cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-xl bg-indigo-105 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold shadow-sm shrink-0">
+                  <Users size={20} />
+                </div>
+                <div>
+                  <h4 className="text-[10px] font-black text-slate-400 dark:text-slate-550 uppercase tracking-widest leading-none mb-1">Wings</h4>
+                  <p className="text-xs font-extrabold text-slate-800 dark:text-white">6 Departments</p>
+                </div>
+              </motion.div>
+
+              {/* Floating Badge 3: Bottom-Right Glow Icon */}
+              <motion.div 
+                animate={{ rotate: 360 }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                className="absolute -bottom-4 -right-4 w-12 h-12 rounded-full bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center backdrop-blur-sm border border-brand-500/30 shadow-lg -z-0"
+              >
+                <Zap size={20} className="animate-pulse" />
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -97,10 +147,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { label: "Active Members", value: "850+", icon: Users },
-              { label: "Yearly Events", value: "45+", icon: Calendar },
-              { label: "Specialized Wings", value: "7", icon: Award },
-              { label: "Alumni Network", value: "5k+", icon: BookOpen },
+              { label: "Active Members", value: "450+", icon: Users },
+              { label: "Yearly Activities", value: "25+", icon: Calendar },
+              { label: "Functional Wings", value: "6", icon: Award },
+              { label: "Founded Year", value: "2023", icon: BookOpen },
             ].map((stat, i) => (
               <motion.div 
                 key={i}
@@ -126,22 +176,22 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-brand-600 dark:text-brand-400 font-semibold tracking-wide uppercase text-sm mb-3">Our Core Philosophy</h2>
-            <h3 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">Empowering the Next Generation of Leaders</h3>
+            <h3 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">Empowering Students to Become Competent Professionals</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="glass-card p-8 md:p-10 rounded-3xl"
+              className="glass-card p-8 md:p-10 rounded-3xl h-full border border-slate-150 dark:border-slate-800"
             >
               <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
                 <Target size={28} />
               </div>
-              <h4 className="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-4">Our Mission</h4>
+              <h4 className="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-4">Our Vision</h4>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
-                To foster a dynamic environment where students can discover their potential, develop critical professional skills, and connect with industry leaders. We bridge the gap between academic learning and corporate requirements.
+                To build a dynamic student ecosystem where individuals become industry-ready professionals through practical skills, real-world experience and strong professional networks, ultimately contributing effectively to the corporate and global workforce.
               </p>
             </motion.div>
 
@@ -149,15 +199,42 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="glass-card p-8 md:p-10 rounded-3xl"
+              className="glass-card p-8 md:p-10 rounded-3xl h-full border border-slate-150 dark:border-slate-800"
             >
               <div className="w-14 h-14 bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-2xl flex items-center justify-center mb-6">
                 <Lightbulb size={28} />
               </div>
-              <h4 className="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-4">Our Vision</h4>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
-                To be the most impactful student organization nationwide, producing visionary leaders, successful entrepreneurs, and outstanding professionals who make meaningful contributions to society.
-              </p>
+              <h4 className="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-4">Our Mission</h4>
+              <ul className="space-y-3 text-slate-600 dark:text-slate-300 text-sm">
+                <li className="flex gap-2 items-start">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></span>
+                  <span>Develop students' technical and soft skills aligned with real corporate requirements.</span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></span>
+                  <span>Provide hands-on experience through projects, events and real-world simulations.</span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></span>
+                  <span>Bridge the gap between academic learning and industry expectations.</span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></span>
+                  <span>Establish strong collaboration with alumni, organizations and industry professionals.</span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></span>
+                  <span>Create opportunities for internships, career guidance and job placement support.</span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></span>
+                  <span>Organize workshops, seminars, training programs and professional events for continuous learning.</span>
+                </li>
+                <li className="flex gap-2 items-start">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></span>
+                  <span>Foster leadership, teamwork and professional growth among members.</span>
+                </li>
+              </ul>
             </motion.div>
           </div>
         </div>
@@ -169,34 +246,39 @@ export default function Home() {
           <div className="flex justify-between items-end mb-12">
             <div className="max-w-2xl">
               <h2 className="text-brand-600 dark:text-brand-400 font-semibold tracking-wide uppercase text-sm mb-3">Departments</h2>
-              <h3 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">Discover Our Wings</h3>
+              <h3 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white">Discover Our Functional Wings</h3>
             </div>
             <Link href="/wings" className="hidden md:flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium">
               View All Wings <ArrowRight size={16} />
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: "Career Development", desc: "Resume building, interview prep, and corporate networking.", color: "bg-blue-50 text-blue-600" },
-              { name: "Leadership", desc: "Workshops and bootcamps to build strong, resilient leaders.", color: "bg-indigo-50 text-indigo-600" },
-              { name: "Event Management", desc: "Organizing seminars, summits, and large-scale competitions.", color: "bg-violet-50 text-violet-600" },
+              { id: "human-resource", name: "Human Resource Wing", desc: "Builds, manages, and develops human capital, coordinating recruitment, onboarding, and KPI-based member management.", color: "bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400" },
+              { id: "partnership-collaboration", name: "Partnership & Collaboration Wing", desc: "Forges corporate sponsorships, strategic deals, corporate networks, and initiates university collaborations.", color: "bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400" },
+              { id: "marketing-branding", name: "Marketing & Branding Wing", desc: "Develops public image, creative graphic assets, social campaigns, media production, and public relations.", color: "bg-pink-50 text-pink-600 dark:bg-pink-900/20 dark:text-pink-400" },
+              { id: "event-program", name: "Event & Program Management Wing", desc: "Plans, organizes, and seamlessly executes skill bootcamps, major competitions, and logistics.", color: "bg-violet-50 text-violet-600 dark:bg-violet-900/20 dark:text-violet-400" },
+              { id: "career-placement", name: "Career & Placement Wing", desc: "Connects students with industry mentorship, resume guidance, mock panels, and exclusive internship pipelines.", color: "bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-400" },
+              { id: "finance", name: "Finance Wing", desc: "Ensures accountability, structures transaction receipts, designs budgets, and secures long-term sustainability.", color: "bg-amber-50 text-amber-600 dark:bg-amber-900/20 dark:text-amber-400" },
             ].map((wing, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative border border-slate-200 dark:border-slate-800 rounded-3xl p-8 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-300 overflow-hidden bg-white dark:bg-slate-800"
+                transition={{ delay: i * 0.05 }}
+                className="group relative border border-slate-200 dark:border-slate-800 rounded-3xl p-8 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-300 overflow-hidden bg-white dark:bg-slate-800 flex flex-col justify-between"
               >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 dark:bg-slate-700 dark:text-white ${wing.color}`}>
-                  <Zap size={24} />
+                <div>
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 dark:bg-slate-700 dark:text-white ${wing.color}`}>
+                    <Zap size={24} />
+                  </div>
+                  <h4 className="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">{wing.name}</h4>
+                  <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">{wing.desc}</p>
                 </div>
-                <h4 className="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">{wing.name} Wing</h4>
-                <p className="text-slate-600 dark:text-slate-400 mb-6">{wing.desc}</p>
-                <Link href={`/wings/${wing.name.toLowerCase().replace(' ', '-')}`} className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400">
-                  Explore <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
+                <Link href={`/wings/${wing.id}`} className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400">
+                  Explore Wing <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
             ))}

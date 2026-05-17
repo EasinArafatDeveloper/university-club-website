@@ -6,11 +6,10 @@ import { CheckCircle2, Award, Users, BookOpen, Target, Lightbulb, TrendingUp } f
 
 export default function AboutPage() {
   const values = [
-    { name: "Leadership", icon: Target, desc: "Fostering the ability to inspire and guide others towards a common goal." },
-    { name: "Career Growth", icon: TrendingUp, desc: "Providing the tools and network to excel in professional environments." },
-    { name: "Communication", icon: Users, desc: "Enhancing interpersonal skills for effective collaboration and articulation." },
-    { name: "Teamwork", icon: CheckCircle2, desc: "Building strong, synergistic teams that achieve more together." },
-    { name: "Innovation", icon: Lightbulb, desc: "Encouraging creative problem-solving and forward-thinking ideas." },
+    { name: "Integrity", icon: Target, desc: "Maintaining the highest moral and ethical standards in all club undertakings." },
+    { name: "Collaboration", icon: Users, desc: "Fostering cross-departmental synergy and a supportive environment for all members." },
+    { name: "Innovation", icon: Lightbulb, desc: "Encouraging creative problem-solving, structured development, and modern industry workflows." },
+    { name: "Professionalism", icon: CheckCircle2, desc: "Developing strong work ethics, compliance with guidelines, and career readiness." },
   ];
 
   return (
@@ -44,13 +43,16 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-heading font-bold text-slate-900 dark:text-white mb-6">Our History & Purpose</h2>
-            <div className="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-300">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 dark:text-white mb-6">Preamble & History</h2>
+            <div className="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-300 text-[15px]">
+              <p className="mb-4 font-semibold italic text-slate-700 dark:text-slate-350">
+                “We, the members of the Scholars Influencers Club (SIC), establish this Constitution to create a structured, transparent and professional platform dedicated to student development and leadership excellence.”
+              </p>
               <p className="mb-4">
-                Founded in 2015, the Career & Leadership Club emerged from a vital need: to bridge the gap between academic theory and practical corporate reality. What started as a small study group has evolved into the university's premier professional development organization.
+                Scholars Influencers Club (SIC) is a student-led, non-profit organization established on <strong>26 April, 2023</strong> at the <strong>University of Scholars</strong>. Recognizing the growing gap between academic learning and industry requirements, we aim to build an environment where students can acquire practical skills, real-world exposure and a strong sense of responsibility.
               </p>
               <p>
-                Our purpose is clear. We exist to transform students into professionals. By providing exclusive access to industry leaders, organizing skill-building workshops, and fostering a culture of continuous improvement, we equip our members with the arsenal they need to thrive in competitive environments.
+                SIC works with motivated students from diverse academic backgrounds including <strong>Textile, CSE, EEE, BBA and English</strong>, who are eager to enhance their skills, explore professional opportunities and prepare themselves for future careers.
               </p>
             </div>
           </motion.div>
@@ -108,13 +110,15 @@ export default function AboutPage() {
               </p>
               <ul className="space-y-4">
                 {[
-                  "Exclusive networking events with top companies",
-                  "1-on-1 mentorship from industry alumni",
-                  "Leadership opportunities to build your resume",
-                  "Access to proprietary career resources and workshops"
+                  "Skill Development: Technical and soft skills aligned with corporate requirements.",
+                  "Corporate Readiness: Real work experience through projects and simulations.",
+                  "Internship & Job Support: Placement assistance and recruiter networking.",
+                  "Alumni Collaboration: Mentorship and career insights from club alumni.",
+                  "Industry Engagement: Partnering and connecting with diverse organizations.",
+                  "Workshops & Seminars: Continuous learning programs and professional events."
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-200">
-                    <CheckCircle2 className="text-brand-400 shrink-0" size={20} />
+                  <li key={i} className="flex items-center gap-3 text-slate-200 text-sm">
+                    <CheckCircle2 className="text-brand-400 shrink-0 mt-0.5" size={18} />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -148,16 +152,17 @@ export default function AboutPage() {
         {/* Executive Committee */}
         <div>
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-slate-900 dark:text-white mb-4">Leadership Team</h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Meet the passionate individuals working behind the scenes to make it all happen.</p>
+            <h2 className="text-3xl font-heading font-bold text-slate-900 dark:text-white mb-4">Core Leadership Panel</h2>
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Meet the strategic leadership coordinating overall operations.</p>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
-              { role: "Chief Adviser", name: "Dr. Robert Chen", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" },
               { role: "President", name: "Sarah Jenkins", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" },
               { role: "Vice President", name: "Michael Chang", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" },
               { role: "General Secretary", name: "Emily Rodriguez", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" },
+              { role: "Joint Secretary", name: "Tanvir Rahman", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" },
+              { role: "Treasurer (Finance Head)", name: "Sajjad Hossain", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" },
             ].map((person, i) => (
               <motion.div
                 key={i}
