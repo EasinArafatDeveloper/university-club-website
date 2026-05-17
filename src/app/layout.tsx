@@ -18,13 +18,13 @@ import AuthProvider from "@/components/providers/AuthProvider";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Career & Leadership Club",
-  description: "A centralized digital platform for the Career & Leadership Club. Empowering students through leadership, career growth, and innovation.",
+  title: "Scholars Influencers Club (SIC)",
+  description: "A centralized digital platform for the Scholars Influencers Club (SIC) at the University of Scholars. Empowering students through practical skills, industrial exposure, and the motto: Learn. Build. Influence.",
   openGraph: {
-    title: "Career & Leadership Club",
-    description: "A centralized digital platform for the Career & Leadership Club. Empowering students through leadership, career growth, and innovation.",
-    url: "https://clc-university.edu",
-    siteName: "Career & Leadership Club",
+    title: "Scholars Influencers Club (SIC)",
+    description: "A centralized digital platform for the Scholars Influencers Club (SIC) at the University of Scholars. Empowering students through practical skills, industrial exposure, and the motto: Learn. Build. Influence.",
+    url: "https://scholars-influencers-club.vercel.app",
+    siteName: "Scholars Influencers Club (SIC)",
     locale: "en_US",
     type: "website",
   },

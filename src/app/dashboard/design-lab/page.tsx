@@ -334,7 +334,7 @@ export default function DesignLabPage() {
                        {/* Body */}
                        <div className="flex-1">
                           <div className="flex justify-between items-center mb-12 font-sans text-sm font-bold">
-                             <p>Ref: CLC/DOC/2026/04</p>
+                             <p>Ref: SIC/DOC/2026/04</p>
                              <p>Date: {new Date().toLocaleDateString()}</p>
                           </div>
                           <div className="whitespace-pre-wrap leading-relaxed text-slate-800 text-lg">
@@ -347,7 +347,7 @@ export default function DesignLabPage() {
                           <div className="font-sans">
                              <div className="w-32 h-px bg-slate-400 mb-2"></div>
                              <p className="text-xs font-bold uppercase tracking-widest">President Signature</p>
-                             <p className="text-[10px] text-slate-400">Career & Leadership Club</p>
+                             <p className="text-[10px] text-slate-400">Scholars Influencers Club</p>
                           </div>
                           <div className="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100">
                              <div className="w-8 h-8 rounded-full bg-brand-600/10 border border-brand-600/20"></div>

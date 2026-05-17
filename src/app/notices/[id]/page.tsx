@@ -88,7 +88,7 @@ export default function NoticeDetailsPage() {
 
           <div className="pt-8 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
             <p className="text-sm text-slate-400 italic">
-              * This is an official notice from the Career & Leadership Club.
+              * This is an official notice from the Scholars Influencers Club (SIC).
             </p>
             <button className="bg-slate-100 dark:bg-slate-800 p-3 rounded-full hover:bg-amber-100 hover:text-amber-600 transition-colors">
               <Share2 size={20} />

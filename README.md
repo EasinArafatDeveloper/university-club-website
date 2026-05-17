@@ -1,4 +1,4 @@
-# Career & Leadership Club (CLC) Platform
+# Scholars Influencers Club (SIC) Platform
 
 A comprehensive, premium web application for managing university club activities, member engagements, and administrative tasks. Built with a modern tech stack to provide a seamless experience for both students and administrators.
 
@@ -70,7 +70,7 @@ A comprehensive, premium web application for managing university club activities
     ```
 
 ## 📄 License
-This project is developed for the Career & Leadership Club. All rights reserved.
+This project is developed for the Scholars Influencers Club (SIC). All rights reserved.
 
 ---
 Developed with ❤️ by **Easin Arafat**

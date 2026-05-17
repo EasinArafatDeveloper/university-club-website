@@ -26,7 +26,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 dark:text-white">Office Location</h4>
-                    <p className="text-slate-600 dark:text-slate-400 mt-1">Student Center, Room 204<br/>University Campus</p>
+                    <p className="text-slate-600 dark:text-slate-400 mt-1">Student Center, Room 204<br/>University of Scholars, Dhaka</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -35,7 +35,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 dark:text-white">Email Address</h4>
-                    <p className="text-slate-600 dark:text-slate-400 mt-1">hello@clc-university.edu</p>
+                    <p className="text-slate-600 dark:text-slate-400 mt-1">hello.sic@scholars.edu</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -44,7 +44,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 dark:text-white">Phone Number</h4>
-                    <p className="text-slate-600 dark:text-slate-400 mt-1">+1 (555) 123-4567</p>
+                    <p className="text-slate-600 dark:text-slate-400 mt-1">+880 1700-000000</p>
                   </div>
                 </div>
               </div>
